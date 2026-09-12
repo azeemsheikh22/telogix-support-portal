@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --color-theme-white: #ffffff;
+  --color-theme-black: #000000;
+  --color-theme-light: #f8fafc;
+  --color-theme-primary: #2563eb;
+  --color-theme-secondary: #4f46e5;
+  --color-theme-success: #16a34a;
+  --color-theme-danger: #dc2626;
+  --color-theme-warning: #eab308;
+  --color-theme-sidebar: #1e293b;
+  --color-theme-border: #e2e8f0;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Professional shadows */
+.shadow-professional {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-professional-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile layout fixes */
+@media (max-width: 768px) {
+  * {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  
+  .mobile-safe {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Enhanced card hover effects */
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Professional table styling */
+.table thead tr {
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Custom gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.gradient-warning {
+  background: linear-gradient(135deg, #eab308 0%, #d97706 100%);
+}
+
+/* Animated loading states */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Mobile-first responsive design helpers */
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
