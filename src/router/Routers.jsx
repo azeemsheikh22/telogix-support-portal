@@ -7,7 +7,8 @@ import Department from "../pages/admin pages/Department";
 import Designation from "../pages/admin pages/Designation";
 import UserRegister from "../pages/admin pages/UserRegister";
 import NrReports from "../pages/admin pages/NrReports.jsx";
-import ReportComingSoon from "../pages/admin pages/ReportComingSoon";
+import DataDelayReport from "../pages/admin pages/DataDelayReport.jsx";
+import IgnitionDisconnectReport from "../pages/admin pages/IgnitionDisconnectReport.jsx";
 
 // Protected Route
 const ProtectedRoute = () => {
@@ -56,8 +57,8 @@ const Routers = () => {
           {/* Admin Pages */}
           <Route path="department" element={<Department />} />
           <Route path="nr-report" element={<NrReports />} />
-          <Route path="ignition-disconnect" element={<ReportComingSoon />} />
-          <Route path="data-delay" element={<ReportComingSoon />} />
+          <Route path="ignition-disconnect" element={<IgnitionDisconnectReport />} />
+          <Route path="data-delay" element={<DataDelayReport />} />
 
           <Route path="designation" element={<Designation />} />
 

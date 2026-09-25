@@ -77,6 +77,7 @@ export default function NrReports() {
   const { nrReport, nrReportLoading, nrReportError } = useSelector(
     (state) => state.reports,
   );
+
   const reportRows = useMemo(
     () => (Array.isArray(nrReport) ? nrReport : []),
     [nrReport],
@@ -202,7 +203,7 @@ export default function NrReports() {
           type="button"
           onClick={fetchReport}
           disabled={nrReportLoading}
-          className="inline-flex h-8 shrink-0 items-center justify-center gap-1.5 rounded-md bg-blue-600 px-3 text-xs font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex h-8 shrink-0 cursor-pointer items-center justify-center gap-1.5 rounded-md bg-blue-600 px-3 text-xs font-medium text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:cursor-not-allowed disabled:opacity-60"
         >
           <FontAwesomeIcon
             icon={faArrowsRotate}
@@ -227,7 +228,7 @@ export default function NrReports() {
             type="button"
             disabled={nrReportLoading}
             onClick={fetchReport}
-            className="font-semibold underline disabled:opacity-50"
+            className="font-semibold cursor-pointer underline disabled:opacity-50"
           >
             Try again
           </button>
@@ -272,7 +273,7 @@ export default function NrReports() {
               <button
                 type="button"
                 onClick={() => setSearch("")}
-                className="mt-2 text-xs font-semibold text-blue-600 hover:underline"
+                className="mt-2 text-xs cursor-pointer font-semibold text-blue-600 hover:underline"
               >
                 Clear search
               </button>
@@ -308,7 +309,7 @@ export default function NrReports() {
                               )
                             }
                             aria-label={`Sort ${column.label} ${direction === "ascending" ? "descending" : "ascending"}`}
-                            className="inline-flex items-center gap-2 rounded-sm hover:text-blue-600 focus-visible:outline-2 focus-visible:outline-blue-600"
+                            className="inline-flex items-center cursor-pointer gap-2 rounded-sm hover:text-blue-600 focus-visible:outline-2 focus-visible:outline-blue-600"
                           >
                             {column.label}
                             <FontAwesomeIcon

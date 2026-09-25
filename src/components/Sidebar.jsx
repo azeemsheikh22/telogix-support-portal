@@ -117,12 +117,10 @@ const Sidebar = ({ onItemClick }) => {
         {
           id: 'ignition-disconnect',
           label: 'Ignition Disconnect',
-          comingSoon: true,
         },
         {
           id: 'data-delay',
           label: 'Data Delay',
-          comingSoon: true,
         },
       ],
     },
